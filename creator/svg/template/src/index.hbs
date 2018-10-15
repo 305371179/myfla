@@ -1,0 +1,26 @@
+function {{name}}() {
+    this.scene = Snap({{width}},{{height}});
+    document.body.appendChild(this.scene.node);
+    this._init();
+}
+
+{{name}}.prototype._init=function () {
+new Layer1(this.scene)
+}
+
+{{#layers}}{{#layer}}
+function {{name}}(scene) {
+    this.scene = scene;
+    this._init();
+}
+
+{{name}}.prototype._init = function () {
+this.group = this.scene.g();{{#frames}}{{#elements}}{{#typeOf type 'shape'}}{{#if edges.length}}{{#each edges}}{{#if edges}}
+    this.{{instance name}} = this.scene.paper.path('{{#path edges ../strokes ../fills  strokeStyle fillStyle1 fillStyle }}{{data.path}}{{/path}}').attr(
+                    {{{data.attr}}}
+            );
+            this.group.add(this.{{instance name true}});{{/if}}{{/each}}{{/if}}{{/typeOf}}{{/elements}}{{/frames}}
+}
+{{/layer}}{{/layers}}
+
+var {{lower name}} = new {{name}}()

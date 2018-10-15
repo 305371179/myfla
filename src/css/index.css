@@ -1,0 +1,17 @@
+*{
+    padding:0;
+    margin: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#scene{
+    width: 550px;
+    height: 400px;
+}
+#svg{
+    width: 100%;
+    height:100%;
+}

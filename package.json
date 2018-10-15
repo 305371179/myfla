@@ -1,0 +1,33 @@
+{
+  "name": "fls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node creator/test.js",
+    "copy": "cp-cli template src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "chokidar": "^2.0.4",
+    "concat-stream": "^1.6.2",
+    "cp-cli": "^1.1.2",
+    "fs-extra": "^7.0.0",
+    "handlebars": "^4.0.12",
+    "js-pretty": "^1.0.0",
+    "jsdom": "^12.2.0",
+    "json-format": "^1.0.1",
+    "json-path-processor": "^0.2.5",
+    "mustache": "^3.0.0",
+    "rimraf": "^2.6.2",
+    "snapsvg": "^0.5.1",
+    "unzip": "^0.1.11",
+    "uppercamelcase": "^3.0.0",
+    "x2js": "^3.2.1",
+    "xml2json": "^0.11.2",
+    "xmlreader": "^0.2.3"
+  }
+}

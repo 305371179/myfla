@@ -1,0 +1,39 @@
+{{#scene}}
+    function {{name}}() {
+        this.scene = Snap({{width}},{{height}});
+        document.body.appendChild(this.scene.node);
+        this._init();
+    }
+
+    {{name}}.prototype = {
+        _init: function () {
+            {{#layers}}
+                {{.}};
+
+            {{/layers}}
+        }
+    }
+
+    var {{instance}} = new {{scene.name}}()
+
+    {{#layers}}
+        {{#layer}}
+            function {{name}}(scene) {
+                this.scene = scene;
+                this._init();
+            }
+
+            {{name}}.prototype = {
+                _init: function () {
+                {{#frames}}
+                    this.{{group}} = this.scene.g();
+                    this.{{instance}} = this.scene.paper.path("__path__").attr({
+                    this.{{group}}.add(this.{{instance}})
+                    });
+                {{/frames}}
+
+                }
+            }
+        {{/layer}}
+    {{/layers}}
+{{/scene}}
